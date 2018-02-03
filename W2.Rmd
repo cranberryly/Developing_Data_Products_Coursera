@@ -1,0 +1,22 @@
+---
+title: "Developing Data Products Course Project Week2"
+author: "Yue Li"
+date: "February 3, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Create a web page using R Markdown that features a map created with Leaflet.  
+
+```{r map}
+library(leaflet)
+my_map <- leaflet() %>%
+        addTiles() %>%
+        addMarkers(lat = 41.033985	, lng = -73.762909,
+                   popup = "White Plains City Center") %>%
+        addCircles(lat = 41.033985	, lng = -73.762909, weight=10,radius=150)
+my_map
+```
